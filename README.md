@@ -43,5 +43,5 @@ If passed a single argument, this is taken to be the hook directory.
 
 ## notes
 
-Any data printed by hooks will be relayed back to the sending client over stdin/stder.
-Metadata of uploads can be prepended to the data processed by your hooks.
+- Any data printed by hooks will be relayed back to the sending client over stdin/stder.
+- Metadata of uploads can be prepended to the data processed by your hooks.
