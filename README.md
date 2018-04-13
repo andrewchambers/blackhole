@@ -32,10 +32,9 @@ run every file in ~/.blackhole_hooks/*
 
 ```
 $ hook $data
-$ rm $data
 ```
 
-finally removes the data. If any hook returns non zero, blackhole exits with 1.
+finally removes the data. If any hook returns non zero, blackhole exits with 1, hook processing ends with the first hook error.
 
 Configuration:
 
@@ -43,6 +42,6 @@ If passed a single argument, this is taken to be the hook directory.
 
 ## notes
 
-- Any data printed by hooks will be relayed back to the sending client over stdin/stder.
-- Metadata of uploads can be prepended to the data processed by your hooks.
+- Any data printed by hooks will be relayed back to the sending client over stdin/stdere.
+- Metadata of uploads can be prepended to the data and then be processed by your hooks.
 - You should be able to change the upload directory by setting TMPDIR on most operating systems
