@@ -26,7 +26,7 @@ On the server side ssh is restricted to a single command, the blackhole executab
 
 The blackhole executable does the follow actions:
 
-read stdin into a random file generated $.
+read stdin into a random file generated in the operating system temporary directory.
 
 run every file in ~/.blackhole_hooks/*
 
@@ -45,3 +45,4 @@ If passed a single argument, this is taken to be the hook directory.
 
 - Any data printed by hooks will be relayed back to the sending client over stdin/stder.
 - Metadata of uploads can be prepended to the data processed by your hooks.
+- You should be able to change the upload directory by setting TMPDIR on most operating systems
